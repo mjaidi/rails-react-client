@@ -14,7 +14,7 @@ class ArticleEdit extends React.Component {
     let token = "Bearer " + localStorage.getItem("jwt");
     axios({
       method: "get",
-      url: `/api/v1/articles/${this.props.match.params.id}`,
+      url: `https://rails-react-login-api.herokuapp.com/api/v1/articles/${this.props.match.params.id}`,
       headers: { Authorization: token }
     })
       .then(response => {
@@ -28,7 +28,7 @@ class ArticleEdit extends React.Component {
     let token = "Bearer " + localStorage.getItem("jwt");
     axios({
       method: "patch",
-      url: `/api/v1/articles/${this.state.id}`,
+      url: `https://rails-react-login-api.herokuapp.com/api/v1/articles/${this.state.id}`,
       headers: { Authorization: token },
       data: this.state
     })

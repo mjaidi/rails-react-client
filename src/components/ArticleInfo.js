@@ -13,7 +13,7 @@ class ArticleInfo extends Component {
     let token = "Bearer " + localStorage.getItem("jwt");
     axios({
       method: "get",
-      url: `/api/v1/articles/${this.props.match.params.id}`,
+      url: `https://rails-react-login-api.herokuapp.com/api/v1/articles/${this.props.match.params.id}`,
       headers: { Authorization: token }
     })
       .then(response => {
@@ -28,7 +28,7 @@ class ArticleInfo extends Component {
     let token = "Bearer " + localStorage.getItem("jwt");
     axios({
       method: "delete",
-      url: `/api/v1/articles/${this.props.match.params.id}`,
+      url: `https://rails-react-login-api.herokuapp.com/api/v1/articles/${this.props.match.params.id}`,
       headers: { Authorization: token }
     })
       .then(() => {

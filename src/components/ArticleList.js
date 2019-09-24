@@ -12,7 +12,7 @@ class ArticleList extends Component {
     let token = "Bearer " + localStorage.getItem("jwt");
     axios({
       method: "get",
-      url: "/api/v1/articles",
+      url: "https://rails-react-login-api.herokuapp.com/api/v1/articles",
       headers: { Authorization: token }
     })
       .then(response => {

@@ -15,7 +15,7 @@ class ArticleAdd extends Component {
     let token = "Bearer " + localStorage.getItem("jwt");
     axios({
       method: "post",
-      url: "/api/v1/articles",
+      url: "https://rails-react-login-api.herokuapp.com/api/v1/articles",
       headers: { Authorization: token },
       data: this.state
     })
